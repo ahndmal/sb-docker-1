@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    <p th:text="${date}"></p>
+    <div th:each="date : ${weekDates}">
+        <div th:text="${date}"></div>
+    </div>
 </body>
 </html>
