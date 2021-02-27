@@ -20,4 +20,3 @@ ENTRYPOINT ["java","-jar", "sb-docker.jar"]
 #ARG JAR_FILE=target/*.jar
 #COPY ${JAR_FILE} sb-docker-1.jar
 #ENTRYPOINT ["java","-jar","/sb-docker-1.jar"]
-

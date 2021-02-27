@@ -12,14 +12,17 @@ import java.util.List;
 public class HomeController {
 
     @GetMapping("/")
-    public String getHomePgae(Model model) {
+    public String getHomePage(Model model) {
+
         List<LocalDate> weekDates = new ArrayList<>();
         LocalDate now = LocalDate.now();
         weekDates.add(now);
+
         for (int i = 1; i <= 7; i++) {
             weekDates.add(now.minusDays(i));
         }
         model.addAttribute("weekDates", weekDates);
+
         return "home";
     }
 }
