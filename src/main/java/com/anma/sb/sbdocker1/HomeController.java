@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpServletResponse;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +17,10 @@ public class HomeController {
     final Logger LOGGER = LoggerFactory.getLogger(HomeController.class.getName());
 
     @GetMapping("/")
-    public String getHomePage(Model model) {
+    public String getHomePage(Model model, HttpServletResponse response) {
+
+        response.addHeader("Country", "Ukraine");
+        response.addHeader("Cat", "Murzik");
 
         List<LocalDate> weekDates = new ArrayList<>();
         LocalDate now = LocalDate.now();
