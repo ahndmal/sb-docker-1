@@ -19,8 +19,8 @@ public class HomeController {
     @GetMapping("/")
     public String getHomePage(Model model, HttpServletResponse response) {
 
-        response.addHeader("Country", "Ukraine");
-        response.addHeader("Cat", "Murzik");
+//        response.addHeader("Country", "Ukraine");
+//        response.addHeader("Cat", "Murzik");
 
         List<LocalDate> weekDates = new ArrayList<>();
         LocalDate now = LocalDate.now();
