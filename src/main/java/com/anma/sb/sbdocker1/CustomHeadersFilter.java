@@ -12,8 +12,8 @@ public class CustomHeadersFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
         httpResponse.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
-        httpResponse.addHeader("Country", "Ukraine");
-        httpResponse.addHeader("Cat", "Murzik");
+        httpResponse.addHeader("X-Frame-Options", "SAMEORIGIN");
+        httpResponse.setHeader("X-Content-Type-Options", "nosniff");
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
