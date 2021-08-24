@@ -1,2 +1,5 @@
 server:
   port: 8080
+db:
+  url: ${DB_URL}
+  name: ${DB_NAME}
