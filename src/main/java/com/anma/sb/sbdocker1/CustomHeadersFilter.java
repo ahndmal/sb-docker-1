@@ -14,6 +14,7 @@ public class CustomHeadersFilter implements Filter {
         httpResponse.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
         httpResponse.addHeader("X-Frame-Options", "SAMEORIGIN");
         httpResponse.setHeader("X-Content-Type-Options", "nosniff");
+        httpResponse.setHeader("Country", "Ukraine");
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
