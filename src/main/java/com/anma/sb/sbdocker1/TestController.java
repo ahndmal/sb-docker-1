@@ -21,6 +21,6 @@ public class TestController {
     public String testPage() {
         LOGGER.info("********* Property DB Name is " + DB_NAME);
         LOGGER.info("********* Property DB URL is " + DB_URL);
-        return "{\"name\": \"Vasyl\"}";
+        return "{\"DB_NAME\": \"" + DB_NAME + "\"}";
     }
 }

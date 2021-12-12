@@ -1,5 +1,19 @@
+spring:
+  config:
+    activate:
+      on-profile: default
+  application:
+    name: SB Dockerfile test
 server:
   port: 8080
+---
+
+spring:
+  config:
+    activate:
+      on-profile: cloud
+server:
+  port: ${APP_PORT}
 db:
   url: ${DB_URL}
   name: ${DB_NAME}
