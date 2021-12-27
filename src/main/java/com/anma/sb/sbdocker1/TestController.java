@@ -19,8 +19,11 @@ public class TestController {
 
     @GetMapping("/test")
     public String testPage() {
-        LOGGER.info("********* Property DB Name is " + DB_NAME);
-        LOGGER.info("********* Property DB URL is " + DB_URL);
-        return "{\"DB_NAME\": \"" + DB_NAME + "\"}";
+        String dbName = (DB_NAME != null) ? DB_NAME : "test";
+        if (DB_URL != null && DB_NAME != null) {
+            LOGGER.info("********* Property DB Name is " + DB_NAME);
+            LOGGER.info("********* Property DB URL is " + DB_URL);   
+        }
+        return "{\"DB_NAME\": \"" + dbName + "\"}";
     }
 }
